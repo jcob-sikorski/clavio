@@ -100,7 +100,7 @@ function App() {
         <div className="flex flex-col flex-grow">
         <div className="flex-grow overflow-y-auto mb-4">
             {/* Scrollable message container */}
-            <div className="p-4 bg-gray-100 h-[10rem] rounded-lg flex flex-col justify-start items-center">
+            <div className="p-4  h-[10rem] rounded-lg flex flex-col justify-start items-center">
               {/* Render messages */}
                 {messages.map((message, index) => (
                   <div key={index} className={`my-2 ${message.sender === 'user' ? 'text-black' : 'text-blue-400'}`}>
@@ -113,7 +113,17 @@ function App() {
           <div>
 
           </div>
-          <div className="p-4 rounded-lg">
+          <div className="p-4 rounded-lg mt-20">
+                      {/* Adjusted caption */}
+                      <p className="py-35 pt-20 text-center text-black text-2xl font-bold">
+              Examples of questions you can ask me:
+            </p>
+            <div class="flex justify-center gap-4 pl-30 pt-5">
+              <button class="border border-gray-900 bg-slate-800 text-white p-4 rounded hover:bg-gray-800 transition-colors">What are my rights if I'm arrested?</button>
+              <button class="border border-gray-900 bg-slate-800 text-white p-4 rounded hover:bg-gray-800 transition-colors">Someone's dog bit me, what can I do?</button>
+              <button class="border border-gray-900 bg-slate-800 text-white p-4 rounded hover:bg-gray-800 transition-colors">What if the police ask to search my vehicle?</button>
+              <button class="border border-gray-900 bg-slate-800 text-white p-4 rounded hover:bg-gray-800 transition-colors">What factors determine if charges can be dropped?</button>
+            </div>
             <div className="flex justify-between items-center mt-5">
                 <input
               value={input}
@@ -133,20 +143,9 @@ function App() {
               
             </div>
 
-                      {/* Adjusted caption */}
-            <p className="py-35 pt-20 text-center text-black text-2xl font-bold">
-              Examples of questions you can ask me:
-            </p>
-            <div class="flex justify-center gap-4 pl-30 pt-5">
-              <button class="border border-gray-900 bg-slate-800 text-white p-4 rounded hover:bg-gray-800 transition-colors">What are my rights if I'm arrested?</button>
-              <button class="border border-gray-900 bg-slate-800 text-white p-4 rounded hover:bg-gray-800 transition-colors">Someone's dog bit me, what can I do?</button>
-              <button class="border border-gray-900 bg-slate-800 text-white p-4 rounded hover:bg-gray-800 transition-colors">What if the police ask to search my vehicle?</button>
-              <button class="border border-gray-900 bg-slate-800 text-white p-4 rounded hover:bg-gray-800 transition-colors">What factors determine if charges can be dropped?</button>
-            </div>
+            
           
-            <div class="flex justify-center gap-4 pl-20 pt-5 ">
-              <p className='border bg-gray-300 p-2 rounded-lg h-[5rem] w-[25rem] mt-[3rem]'>Ad</p>
-            </div>
+            
 
             <div className='flex justify-center'>
           <button
@@ -158,7 +157,9 @@ function App() {
           </div>
 
           </div>
-
+          <div class="flex justify-center gap-4 pl-20 pt-5 ">
+              <p className='border bg-gray-300 p-2 rounded-lg h-[5rem] w-[25rem] mt-[3rem]'>Ad</p>
+            </div>
           
         </div>
       </div>
