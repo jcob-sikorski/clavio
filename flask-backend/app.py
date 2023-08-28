@@ -11,7 +11,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "http://clavio.pl:80"}})
 # Load the chatbot data and model
 # Replace these lines with your actual data and model loading code
 with open('data.json', 'r') as json_data:

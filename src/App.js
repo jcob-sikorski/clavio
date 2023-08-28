@@ -45,7 +45,7 @@ function App() {
   const sendMessage = async () => {
     // Send user input to the Flask API
     try {
-      const response = await axios.post('http://127.0.0.1:5000/get_response', { input });
+      const response = await axios.post('http://clavio.pl:5000/get_response', { input });
       const newMessage = { text: input, sender: 'user' };
       const botMessage = { text: response.data.response, sender: 'bot' };
       setMessages([...messages, newMessage, botMessage]);
